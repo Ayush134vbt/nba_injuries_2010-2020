@@ -40,3 +40,4 @@
 - Team is not used to define a unique injury event, because of the blank values.
 - The cutoff date for the Hornets/Pelicans split is based on the franchise rename dates, not on a field in the data, so rows near the cutoff could be misassigned.
 - Unexpected team name: "Bullets" (1 row, 5/11/17). The Washington Bullets became the Wizards in 1997, so this is a data-entry error. Changed to "Wizards" in `clean_data` (`raw_data` untouched). [Basis: Notes / player / assumption from the name]
+- Blank Team (2 injury rows): rows 13009 (2/09/15, Glen Davis) and 13011 (3/09/15, Landry Fields). Filled from ESPN team history as of those dates: Glen Davis → Clippers, Landry Fields → Raptors. Edited in `clean_data` only; `raw_data` untouched.
